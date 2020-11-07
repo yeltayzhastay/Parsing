@@ -117,12 +117,13 @@ class VK_Parsing:
 def main():
     first_time = time.time()
     
-    urls = ['samsung.galaxy_a', 'kupit_iphone_v_moskve', 'rumicomrussia', 'huaweip20', 'ru_oppo']
+    #urls = ['samsung.galaxy_a', 'kupit_iphone_v_moskve', 'rumicomrussia', 'huaweip20', 'ru_oppo'][1:3]
+    urls = ['kupit_iphone_v_moskve', 'rumicomrussia']
     token = "fe91c3a9fe91c3a9fe91c3a96efee5034cffe91fe91c3a9a13265b3a8814f5207fa1f50"
 
     vk_parse = VK_Parsing(token)
     vk_parse.parsing(urls, 10000)
-    vk_parse.to_csv('vk_dataset_2.csv')
+    vk_parse.to_csv('vk_dataset_2ipru.csv')
 
     print('Parsing data finished!', round(time.time() - first_time, 2), 'sec')
 
